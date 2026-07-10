@@ -37,9 +37,17 @@ header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid 
 .tel{background:var(--navy);color:#fff;font-weight:700;font-size:14px;padding:9px 18px;border-radius:12px;letter-spacing:0.02em}
 .tel:hover{background:var(--blue);color:#fff}
 @media(max-width:720px){
-  .nav{flex-wrap:wrap;height:auto;padding:12px 0;gap:10px}
-  .menu{gap:18px;font-size:14px}
-  .tel{margin-left:auto}
+  .nav{height:56px}
+  .logo{font-size:18px;white-space:nowrap}
+  .menu{gap:13px;font-size:13.5px}
+  .menu a{padding:4px 1px}
+  .tel{font-size:12px;padding:8px 12px;white-space:nowrap}
+}
+@media(max-width:520px){
+  .nav{flex-wrap:wrap;height:auto;padding:10px 0;row-gap:8px}
+  .logo{order:1}
+  .tel{order:2;margin-left:auto;font-size:12px}
+  .menu{order:3;flex-basis:100%;justify-content:center;gap:20px;font-size:14px;padding-top:4px;border-top:1px solid var(--line)}
 }
 
 /* ---------- 히어로 ---------- */
@@ -66,13 +74,23 @@ header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid 
 .s3{bottom:20%;right:20%;font-size:15px;animation-delay:-2.2s}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
 @keyframes twinkle{0%,100%{opacity:.25;transform:scale(.85)}50%{opacity:1;transform:scale(1.1)}}
-@media(max-width:720px){.b1{width:80px;height:80px;right:6%}.b2{right:14%}.b3,.s2{display:none}}
+@media(max-width:720px){.b1{width:70px;height:70px;right:5%;top:8%}.b2,.b3,.b5,.s1,.s2,.s3{display:none}.b4{width:60px;height:60px;bottom:8%;right:4%;opacity:.6}}
 @media(prefers-reduced-motion:reduce){.bubble,.spark{animation:none}}
-.hero h1{font-size:clamp(28px,4.4vw,44px);font-weight:800;line-height:1.35;letter-spacing:-0.02em}
+.hero h1{font-size:clamp(28px,4.4vw,44px);font-weight:800;line-height:1.35;letter-spacing:-0.02em;position:relative;z-index:2}
 .hero h1 em{font-style:normal;color:var(--sky)}
-.hero p{margin-top:14px;font-size:clamp(15px,1.8vw,18px);color:#c9d8ef;max-width:560px}
-.hero .btn{display:inline-block;margin-top:24px;background:#fff;color:var(--navy);font-weight:700;padding:14px 30px;border-radius:12px;font-size:15px;transition:.2s}
+.hero p{margin-top:14px;font-size:clamp(15px,1.8vw,18px);color:#c9d8ef;max-width:560px;position:relative;z-index:2}
+.hero .btn{display:inline-block;margin-top:24px;background:#fff;color:var(--navy);font-weight:700;padding:14px 30px;border-radius:12px;font-size:15px;transition:.2s;position:relative;z-index:2}
 .hero .btn:hover{background:var(--sky);color:var(--navy-deep)}
+.hero-tags span{position:relative;z-index:2}
+@media(max-width:560px){
+  .hero{padding:44px 0 52px}
+  .hero h1{font-size:26px;line-height:1.4}
+  .hero p{font-size:14.5px;line-height:1.7}
+  .hero .btn{display:block;text-align:center;margin-top:22px;padding:15px 20px}
+  .eyebrow{font-size:12px;padding:6px 13px;margin-bottom:14px}
+  .hero-tags{gap:8px;margin-top:24px}
+  .hero-tags span{font-size:12px;padding:6px 13px}
+}
 
 /* ---------- 브랜드 소개 ---------- */
 .brand{padding:88px 0}
@@ -137,6 +155,20 @@ footer{background:var(--footer);color:#cfd4da;padding:44px 0 52px;font-size:13.5
 .f-col h4{font-size:13px;font-weight:700;color:#8d949c;margin-bottom:12px;letter-spacing:.04em}
 .f-col a{display:block;margin-top:8px;color:#cfd4da}
 .f-col a:hover{color:#fff}
+
+@media(max-width:560px){
+  .brand{padding:52px 0}
+  .brand .desc{font-size:15px;line-height:1.85}
+  .services{padding:16px 0 52px}
+  .svc-grid{gap:26px 18px}
+  .blog{padding:52px 0}
+  .gallery{padding:52px 0}
+  .sec-head{margin-bottom:30px}
+  .cta{padding:44px 0}
+  .cta .inner{flex-direction:column;align-items:flex-start;gap:18px}
+  .cta .btn{width:100%;text-align:center}
+  footer{padding:36px 0 44px}
+}
 </style>
 </head>
 <body>
@@ -160,7 +192,7 @@ footer{background:var(--footer);color:#cfd4da;padding:44px 0 52px;font-size:13.5
   <span class="spark s1">✦</span><span class="spark s2">✦</span><span class="spark s3">✦</span>
   <div class="wrap">
     <span class="eyebrow">사무실·상업공간 청소 전문</span>
-    <h1>사무실도, 매장도,<br>처음처럼 <em>깨끗하게</em>. 바로클린이 책임집니다</h1>
+    <h1>사무실도, 매장도,<br>처음처럼 <em>깨끗하게</em>.<br>바로클린이 책임집니다</h1>
     <p>정기관리부터 준공청소까지, 공간 특성에 맞춘 전문 청소 서비스.<br>놓치기 쉬운 구석까지 꼼꼼하게 관리합니다.</p>
     <a class="btn" href="contact.html">무료 견적 문의하기</a>
     <div class="hero-tags">

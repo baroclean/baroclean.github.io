@@ -37,9 +37,17 @@ header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid 
 .tel{background:var(--navy);color:#fff;font-weight:700;font-size:14px;padding:9px 18px;border-radius:12px;letter-spacing:0.02em}
 .tel:hover{background:var(--blue);color:#fff}
 @media(max-width:720px){
-  .nav{flex-wrap:wrap;height:auto;padding:12px 0;gap:10px}
-  .menu{gap:18px;font-size:14px}
-  .tel{margin-left:auto}
+  .nav{height:56px}
+  .logo{font-size:18px;white-space:nowrap}
+  .menu{gap:13px;font-size:13.5px}
+  .menu a{padding:4px 1px}
+  .tel{font-size:12px;padding:8px 12px;white-space:nowrap}
+}
+@media(max-width:520px){
+  .nav{flex-wrap:wrap;height:auto;padding:10px 0;row-gap:8px}
+  .logo{order:1}
+  .tel{order:2;margin-left:auto;font-size:12px}
+  .menu{order:3;flex-basis:100%;justify-content:center;gap:20px;font-size:14px;padding-top:4px;border-top:1px solid var(--line)}
 }
 
 /* ---------- 페이지 배너 ---------- */
@@ -96,6 +104,19 @@ footer{background:var(--footer);color:#cfd4da;padding:44px 0 52px;font-size:13.5
 .f-col h4{font-size:13px;font-weight:700;color:#8d949c;margin-bottom:12px;letter-spacing:.04em}
 .f-col a{display:block;margin-top:8px;color:#cfd4da}
 .f-col a:hover{color:#fff}
+
+@media(max-width:560px){
+  .banner{padding:40px 0}
+  .banner .bb3,.banner .sp2{display:none}
+  .svc{padding:48px 0}
+  .svc-head{margin-bottom:28px}
+  .svc-body{gap:24px}
+  .svc-text{font-size:15px;line-height:1.85}
+  .cta{padding:44px 0}
+  .cta .inner{flex-direction:column;align-items:flex-start;gap:18px}
+  .cta .btn{width:100%;text-align:center}
+  footer{padding:36px 0 44px}
+}
 </style>
 </head>
 <body>
