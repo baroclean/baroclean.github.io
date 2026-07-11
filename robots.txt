@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://baroclean.github.io/sitemap.xml
